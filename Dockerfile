@@ -1,5 +1,3 @@
-## This Dockerfile is an equivalent of the Buildah script found in buildah.sh
-
 ## Build the project
 FROM gradle:6.7.1-jdk11-hotspot AS builder
 
