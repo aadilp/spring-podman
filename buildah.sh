@@ -6,14 +6,8 @@ builder=$(buildah from gradle:6.7.1-jdk11-hotspot)
 buildah config --workingdir='/app' $builder
 
 buildah copy $builder build.gradle settings.gradle /app/
+buildah copy $builder src /app/src
 buildah copy $builder gradle /app/gradle
-buildah copy --chown gradle:gradle $builder . /home/gradle/src
-
-buildah config --user root $builder
-
-buildah run $builder -- chown -R gradle /home/gradle/src
-
-buildah copy $builder . .
 
 buildah run $builder -- gradle clean build -x test
 
