@@ -9,7 +9,7 @@ A super simple Spring Boot containerization example using Podman and Buildah.
 
 ## Build
 
-In project root, run `sudo ./buildah.sh`
+In project root, run `sudo ./buildah-build-service.sh`
 
 ## Run
 
