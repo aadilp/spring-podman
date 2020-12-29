@@ -20,7 +20,7 @@ buildermnt=$(buildah mount $builder)
 
 buildah copy $jdkcontainer $buildermnt/app/build/libs/springpodman*.jar service.jar
 
-buildah unmount $buildermnt
+buildah unmount $builder
 
 buildah config --port 8080 $jdkcontainer
 
