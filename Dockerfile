@@ -13,7 +13,6 @@ RUN gradle clean build -x test
 FROM adoptopenjdk:11-jre-hotspot
 
 WORKDIR /app
-COPY . /app/
 
 COPY --from=builder /app/build/libs/springpodman*.jar service.jar
 

@@ -15,7 +15,6 @@ buildah run $builder -- gradle clean build -x test
 jdkcontainer=$(buildah from adoptopenjdk:11-jre-hotspot)
 
 buildah config --workingdir='/app' $jdkcontainer
-buildah copy $jdkcontainer . /app/
 
 buildermnt=$(buildah mount $builder)
 
