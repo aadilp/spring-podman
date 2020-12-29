@@ -2,6 +2,8 @@
 
 A super simple Spring Boot containerization example using Podman and Buildah.
 
+Not sure what's going on here? Check out the full tutorial here: https://blog.aadilp.com/containerize-an-application-with-podman-and-buildah
+
 ## Prerequisites
 
 - [Podman](https://podman.io)
